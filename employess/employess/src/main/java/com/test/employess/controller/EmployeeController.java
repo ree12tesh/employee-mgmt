@@ -26,7 +26,7 @@ public class EmployeeController {
       return ResponseEntity.ok(employeeService.getEmployeeById(id));
     }
 
-    @GetMapping("")
+    @GetMapping
     public ResponseEntity<List<Employees>> getEmployees(@RequestParam(required = false) String name,
                                         @RequestParam(required = false) Double fromSalary,
                                         @RequestParam(required = false) Double toSalary) throws IOException {
