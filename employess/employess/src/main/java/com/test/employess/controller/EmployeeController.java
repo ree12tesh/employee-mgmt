@@ -17,8 +17,8 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @PostMapping
-    public ResponseEntity<Integer>  createEmployee(@RequestBody Employees employee) throws IOException {
-        return ResponseEntity.ok(employeeService.persistEmployees(employee));
+    public ResponseEntity<String > createEmployee(@RequestBody Employees employee) throws IOException {
+        return ResponseEntity.ok("\"id\": "+employeeService.persistEmployees(employee));
     }
 
     @GetMapping("/{id}")
